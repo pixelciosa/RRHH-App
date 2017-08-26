@@ -1,0 +1,25 @@
+.search {
+	width: 80%;
+	text-align: center;
+	margin: 15px auto;
+}
+@media (min-width: 768px) {
+	.search {
+	width: 60%;
+}
+}
+@media (min-width: 1200px) {
+	.search {
+	width: 50%;
+}
+}
+.search input {
+	height: 40px;
+	font-size: 25px;
+}
+
+.search .fa-search {
+	font-size: 20px;
+	margin: 10px 5px;
+	color: #f50002;
+}

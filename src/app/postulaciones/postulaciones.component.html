@@ -1,0 +1,8 @@
+<section id="postulaciones">
+    <app-postulaciones-buscar (update)="term = $event"></app-postulaciones-buscar>
+	<app-postulaciones-controles (update)="arg = $event" ></app-postulaciones-controles>
+    <div class="listing">
+      <app-postulaciones-item [term]="term" [arg]="arg"></app-postulaciones-item>
+
+    </div>
+    </section>

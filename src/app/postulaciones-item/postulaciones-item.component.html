@@ -1,0 +1,27 @@
+<div *ngFor="let posicion of posiciones | searchBox : term | orderBy : arg " class="item-wrapper">
+        <div class="item">
+          <div class="collapsed flex-item">
+            <a role="button" (click)="posicion.postulantes = !posicion.postulantes" [class.active]="posicion.postulantes"><i class="fa fa-caret-right fa-2x"></i></a>
+          </div>
+
+          <div class="data flex-item">
+            <h2>{{posicion.nombre}}</h2>
+            <div class="details">
+              <span class="fecha">Abierta: {{posicion.fecha | date:'d/M/y'}}</span>
+              <span class="estado">
+                <i *ngIf="posicion.estado==='Activa'" class="fa fa-circle green"></i>
+                <i *ngIf="posicion.estado==='Detenida'" class="fa fa-circle red"></i>
+                <i *ngIf="posicion.estado==='Terminada'" class="fa fa-check green"></i>
+                <i *ngIf="posicion.estado==='Cancelada'" class="fa fa-close red"></i>
+                <span> Estado: {{posicion.estado}}</span></span>
+              <span class="cantidad">Postulantes: ??</span>
+            </div>
+          </div>
+
+          <div class="moreActions flex-item">
+            <a href="#" class="fa fa-window-restore" title="Abrir en nuevo tab"></a>
+            <a href="#" class="fa fa-file-pdf-o" title="Exportar a pdf"></a>
+          </div>
+        </div>
+        <app-postulantes *ngIf="posicion.postulantes" estaPosicion="{{posicion.nombre}}"></app-postulantes>
+      </div>

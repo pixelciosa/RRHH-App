@@ -1,0 +1,130 @@
+.item-wrapper {
+	border-bottom: solid 1px #d7d7d7;
+}
+
+.item{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    padding: 15px 0;
+    }
+
+.flex-item:nth-child(1) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+
+.flex-item:nth-child(2) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+
+.flex-item:nth-child(3) {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    }
+.item h2 {
+	font-size: 20px;
+	margin-top: 10px;
+}
+.details span {
+	margin-right: 15px;
+}
+.details span span {
+	margin-right: 0px;
+}
+.details .fa-circle {
+	font-size: 10px;
+}
+.collapsed,
+.expanded {
+	width: 20px;
+	display: inline-block;
+	margin: 10px;
+}
+.data {
+	display: inline-block;
+}
+.moreActions {
+	display: inline-block;
+	width: 70px;
+	text-align: right;
+	float: right;
+	margin: 10px;
+}
+.moreActions a.fa:hover {
+	text-decoration: none;
+ }
+.collapsed a,
+.expanded a,
+.moreActions a {
+	color: #2d2d2d;
+	font-size: 20px;
+	margin: 0 5px;
+}
+.collapsed a:hover,
+.expanded a:hover,
+.moreActions a:hover {
+	color: #f50002;
+}
+.collapsed a {
+    transition: all 0.5s ease;
+}
+
+.collapsed a.active i.fa {
+    transform: rotate(90deg);
+    color: #f50002;
+}
+@media (max-width: 767px) {
+	.details .fecha,
+	.details .estado span,
+	.details .cantidadPostulantes {
+		display: none;
+	}
+	.details .estado {
+		margin-right: 5px;
+	}
+	.details .estado .fa{
+		display: inline-block;
+	}
+	.moreActions {
+		min-width: 70px;
+	}
+}
+

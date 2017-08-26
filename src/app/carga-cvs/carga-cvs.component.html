@@ -1,0 +1,65 @@
+  <div class="container">
+   <app-header></app-header>
+
+
+    <section id="carga-CVs">
+      <form (ngSubmit)="onSubmit(cvForm); cvForm.resetForm()" #cvForm="ngForm" class="form-upload" id="formUpload">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" name="nombre" placeholder="" #nombre="ngModel" [(ngModel)]="postulante.nombre" required minlength="3" pattern="[A-Za-z]*">
+          <span *ngIf="!nombre.valid && nombre.touched" class="alert-danger">El nombre es obligatorio</span>
+        </div>
+        <div class="form-group">
+          <label for="apellido">Apellido</label>
+          <input type="text" class="form-control" name="apellido" placeholder="" #apellido="ngModel" [(ngModel)]="postulante.apellido" required pattern="[A-Za-z]*">
+          <span *ngIf="!apellido.valid && apellido.touched" class="alert-danger">El apellido es obligatorio</span>
+        </div>
+        <div class="form-group">
+          <label for="fecha-nacimiento">Fecha de nacimiento</label>
+          <input type="date" class="form-control" name="fecha-nacimiento" placeholder="dd/mm/aaaa" #fecha_nacimiento="ngModel" [(ngModel)]="postulante.fecha_nacimiento" required>
+          <span *ngIf="!fecha_nacimiento.valid && fecha_nacimiento.touched" class="alert-danger">La fecha de nacimiento es obligatoria</span>
+        </div>
+        <div class="form-group">
+          <label for="telefono">Teléfono</label>
+          <input type="number" class="form-control" name="telefono" placeholder="11-34098761" #telefono="ngModel" [(ngModel)]="postulante.telefono" required >
+          <span *ngIf="!telefono.valid && telefono.touched" class="alert-danger">El teléfono es obligatorio</span>
+        </div>
+        <div class="form-group">
+          <label for="puesto">Puesto</label>
+          <select name="puesto" name="puesto" class="form-control" ngModel>
+            <option value="" >Sin determinar</option>
+            <option value="1">Diseñador gráfico especialista en web</option>
+            <option value="2">Diseño UX para interfases móviles </option>
+
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="fecha-postulacion">Fecha de postulación</label>
+          <input type="date" class="form-control" name="fecha-postulacion" placeholder="dd/mm/aaaa" name="fecha-nacimiento" placeholder="dd/mm/aaaa" #fecha_postulacion="ngModel" [(ngModel)]="postulante.fecha_postulacion" required>
+          <span *ngIf="!fecha_postulacion.valid && fecha_postulacion.touched" class="alert-danger">La fecha de postulación es obligatoria</span>
+        </div>
+        <div class="">
+<div *ngIf="!uploadedFile" id="filename" class="fileUpload btn btn-lg center-block" role="button">
+<span><i class="fa fa-cloud-upload" aria-hidden="true"></i>Adjuntar CV</span>
+<input name="file" id="file" type="file" class="upload" (change)="fileChangeEvent($event)" placeholder="Upload file..." [ngModel]=""/>
+</div>
+<div class="center-block text-center">
+  <p *ngIf="uploadedFile"><i class="fa fa-cloud-upload" aria-hidden="true"></i> <i>{{ uploadedFile.name }}</i></p>
+<button *ngIf="uploadedFile" id="btnUpload" type="submit" class="btn btn-lg success-bg white" [disabled]="!cvForm.form.valid"><i class="fa fa-save" aria-hidden="true"></i> Guardar</button>
+<button *ngIf="uploadedFile" id="btnCancel" type="button" class="btn btn-lg" (click)="cancel()"><i class="fa fa-times" aria-hidden="true"></i>Cancelar</button>
+<p *ngIf="uploadedFile && !cvForm.form.valid" class="bg-info">Debes llenar todos los campos del formulario</p>
+</div>
+<p class="bg-success text-center" [hidden]="!submitted" *ngIf="mensajeExito">Tarea completada exitosamente. Gracias</p>
+
+
+</div>
+
+
+      </form>
+    </section>
+
+
+ <app-footer></app-footer>
+
+
+  </div>

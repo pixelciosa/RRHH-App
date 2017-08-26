@@ -1,0 +1,101 @@
+@font-face {
+    font-family: "Roboto";
+    src: url(./assets/fonts/Roboto/Roboto-Regular.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Light";
+    src: url(./assets/fonts/Roboto/Roboto-Light.ttf) format("truetype");
+}
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(./assets/fonts/Roboto/Roboto-Bold.ttf) format("truetype");
+}
+/*
+Rojo: #f50002;
+gris oscuro: #252525;
+gris claro: #d7d7d7:;
+negro: #2d2d2d;
+verde success: #5cb85c;
+*/
+
+
+body {
+	font-family: 'Roboto', sans-serif;
+	color: #2d2d2d;
+	background-color: #f5f5f5;
+}
+.light {
+	font-family: "Roboto-Light"
+}
+.bold, b, strong {
+	font-family: "Roboto-Bold"
+}
+.green, .success {
+	color: #5cb85c;
+}
+.green-bg, .success-bg {
+	background-color: #5cb85c;
+}
+.red, .alert {
+	color: #f50002;
+}
+.red-bg, .alert-bg {
+	background-color: #f50002;
+}
+a {
+	color: #252525;
+}
+a:hover {
+	color: #f50002;
+	text-decoration: none;
+}
+a:focus {
+	text-decoration: none;
+}
+.container {
+	background-color: #FFF;
+}
+
+
+
+#carga-CVs form{
+	width: 50%;
+	margin: 40px auto;
+}
+@media (max-width: 639px) {
+	#carga-CVs form{
+	width: 80%;
+	}
+}
+#carga-CVs form label {
+	font-family: "Roboto-Light";
+	font-size: 20px;
+}
+#carga-CVs .fileUpload input {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0px;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+#carga-CVs .btn.fileUpload {
+	color: #FFF;
+	background-color: #f50002;
+	width: 160px;
+	position: relative;
+    overflow: hidden;
+    margin: 10px auto;
+}
+#carga-CVs .btn i {
+	margin-right: 10px;
+}
+
+
+
+
+

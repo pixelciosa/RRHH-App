@@ -1,0 +1,30 @@
+.postulantes h3 {
+	font-size: 18px;
+	color: #888;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.postulantes {
+	width: 100%;
+}
+.postulantes table thead tr th {
+	background-color: #777;
+	color: #FFF;
+	font-weight: 400;
+}
+.postulantes table thead tr a i{
+	color: #FFF;
+	}
+.postulantes table thead tr a.active i{
+	color: #f50002;
+}
+.postulantes table td.ver-fav {
+	text-align: right;
+}
+.postulantes table td a i {
+	font-size: 20px;
+	margin: 0 10px;
+}
+.postulantes table td a i.fa-close {
+	margin: 0px;
+}

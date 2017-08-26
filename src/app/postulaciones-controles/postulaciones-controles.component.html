@@ -1,0 +1,99 @@
+      <div class="controls row">
+        <div class="order col-xs-8">
+          Ordenar:
+          <div class="hidden-xs">
+            <a role="button" #nombre (click)="sortBy('nombre')" [ngClass]="{'active': nombre.isActive }">Alfabéticamente</a>
+            <a role="button" #fecha (click)="sortBy('fecha')" [ngClass]="{'active': fecha.isActive }">Más recientes</a>
+            <a role="button" (click)="sortBy('fecha : true')">Más antíguos</a>
+          </div>
+          <div class="visible-xs-inline-block">
+            <select name="sortBy" id="sortBy">
+              <option value="1">Alfabéticamente</option>
+              <option value="2">Más recientes</option>
+              <option value="3">Mas antíguos</option>
+            </select>
+          </div>
+        </div>
+        <div class="filters-btn col-xs-4">
+          <a class="" role="button" (click)="isCollapsed = !isCollapsed"
+           aria-controls="filters-pane">
+
+            <i class="fa fa-filter"></i>Filtrar
+          </a>
+        </div>
+        <div class="filters-pane col-xs-12" id="filters-pane" [ngbCollapse]="!isCollapsed">
+          <form action="">
+            <div class="col-xs-6 col-md-3">
+              <label for="estado" class="group-title">Estado:</label>
+              <div class="checkbox">
+                <label>
+                <input type="checkbox" name="estado" value="Activas">Activas</label>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" name="estado" value="Detenidas">Detenidas</label>
+              </div>
+              <div class="checkbox">
+                <label>
+              <input type="checkbox" name="estado" value="Terminadas">Terminadas</label>
+              </div>
+              <div class="checkbox">
+                <label>
+              <input type="checkbox" name="estado" value="Canceladas">Canceladas</label>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <label for="año" class="group-title">Año:</label>
+              <div class="checkbox">
+                <label><input type="checkbox" name="año" value="2017">2017</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="año" value="2016">2016</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="año" value="2015">2015</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="año" value="2014">2014</label>
+              </div>
+              <a href="#" class="ver-mas">Ver +</a>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <label for="postulaciones" class="group-title">Postulaciones:</label>
+              <div class="checkbox">
+                <label><input type="checkbox" name="postulaciones" value="0-10">Menos de 10</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="postulaciones" value="11-50">Entre 11 y 50</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="postulaciones" value="51-100">Entre 51 y 100</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="postulaciones" value="101-o-mas">101 o más</label>
+              </div>
+            </div>
+            <div class="col-xs-6 col-md-3">
+              <label for="area" class="group-title">Área:</label>
+              <div class="checkbox">
+                <label><input type="checkbox" name="area" value="Administracion">Administración</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="area" value="Diseño-Desarrollo">Diseño / Desarrollo</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="area" value="Management">Management</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" name="area" value="Infraestructura">Infraestructura</label>
+              </div>
+              <a href="#" class="ver-mas">Ver +</a>
+            </div>
+
+          </form>
+         <a class="close-pane" role="button" *ngIf="!isCollapsed"
+           aria-controls="filters-pane"><i class="fa fa-ellipsis-h"></i></a>
+
+
+        </div>
+      </div>

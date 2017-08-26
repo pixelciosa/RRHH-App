@@ -1,0 +1,93 @@
+
+.controls {
+	margin-top: 30px;
+}
+.controls .order a {
+	color: #f50002;
+	padding: 5px 10px;
+}
+.controls .order a.active {
+	color: #FFFFFF;
+	background-color: #f50002;
+	border-radius: 4px;
+}
+.controls .order .hidden-xs {
+	display: inline-block;
+}
+.controls .order select {
+	line-height: 20px;
+	background-color: #f50002;
+	font-size: 12px;
+	color: white;
+	border: none;
+	height: 25px;
+}
+.controls .filters-btn {
+	text-align: right;
+	position: relative;
+}
+.controls .filters-btn i.fa {
+	margin-right: 10px;
+}
+.controls .filters-btn a {
+	height: 50px;
+	width: 80px;
+	position: absolute;
+    right: 0px;
+    text-align: center;
+    line-height: 35px;
+}
+.controls .filters-btn a.active {
+	color: #f50002;
+	background-color: #ebebeb;
+}
+.controls .filters-pane {
+	background-color: #ebebeb;
+	margin: 15px 0;
+	position: relative;
+}
+.controls .filters-pane .col-xs-6{
+	margin: 15px 0;
+}
+@media (max-width: 360px) {
+	.controls .filters-pane .col-xs-6{
+		width: 100%;
+	}
+}
+.controls .filters-pane .group-title {
+	margin-bottom: 0px;
+	margin-top: 10px;
+}
+.controls .filters-pane .col-xs-6 .checkbox {
+	margin-left: 15px;
+}
+.controls .filters-pane .col-xs-6 .checkbox:last-of-type{
+	margin-bottom: 0px;
+}
+.controls .filters-pane .ver-mas {
+	color: #f50002;
+	font-size: 13px;
+	margin-top: -15px;
+	margin-left: 15px;
+}
+.controls .filters-pane .close-pane {
+	position: absolute;
+	bottom:-15px;
+	left:0;
+	right: 0;
+	margin: auto;
+	width: 100px;
+	height: 0px;
+	text-align: center;
+	color: #212121;
+	border-left: solid 20px transparent;
+	border-right: solid 20px transparent;
+	border-top: solid 15px #ebebeb;
+}
+.controls .filters-pane .close-pane i.fa {
+	position: absolute;
+	top: -15px;
+	left:0;
+	right: 0;
+	margin: auto;
+}
